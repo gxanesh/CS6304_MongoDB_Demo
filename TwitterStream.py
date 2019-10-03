@@ -15,7 +15,7 @@ class listener(StreamListener):
     def on_data(self, data):
         self.counter += 1
         print(self.counter)
-        f = open("tweet.txt", "a")
+        f = open("tweets.txt", "a")
         f.write(data)
         f.close()
         return(True)
