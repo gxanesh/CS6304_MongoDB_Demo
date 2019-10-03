@@ -1,18 +1,7 @@
 # MongoDB_Demo
 
-### Importing Project:
-* Open “eclipse”, right click on “Package Explorer” window, click import.
-* Select “Git”-> “Projects from Git” and click “next”.
-* Select “clone url” and click “next”.
-* Paste “https://github.com/shudipdatta/DownloadTwitterStream.git” in the “url” textbox, Change protocol to “git”, and click “next”. 
-* Choose “Import existing project” and click “finish”.
-
-### Referencing libraries:
-* Right click on project and select “build path”-> “configure build path” ->”libraries”->”add external jars”.
-* Go to "cloudera" -> "git" -> "DownloadTwitterStream" -> "lib" and select all jars and click ok.
-
 ### Tweets Stream:
-* Run "TwitterStreamingAPI.java" and store as many tweets as you like and then stop the execution.
+* Run "TwitterStream.py" and store as many tweets as you like and then stop the execution. The keyword here is "cloud".
 * All your downloaded tweets are now stored in "tweets.txt" file in JSON format
 * See "sample_tweet" to understand the structure of a tweet.
 
