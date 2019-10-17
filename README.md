@@ -14,6 +14,10 @@
 
 * "Firefox already running" error solve by command:     killall -SIGTERM firefox
 
+* "Eclipse workspace in use" error solve by command:
+* cd ~/yourWorkspaceDirectory/.metadata
+* rm .lock
+
 * "Eclipse resource is out of sync" error solve by:
 * Windows -> Preferences -> General -> Workspace
 * Check "Refresh using native tool or polling"
