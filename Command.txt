@@ -1,10 +1,10 @@
-//enter into mongodb
+//to enter into mongodb
 mongo
-//exit from mongodb
+//to exit from mongodb
 exit
 
 //create a database or switch to a database
-use emp
+use mydb
 //show databases
 show dbs
 //see currently selected db
