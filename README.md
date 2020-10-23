@@ -32,3 +32,4 @@
 * sudo yum install -y mongodb-org //to install mongodb in your computer
 * sudo /sbin/service mongod start //to start the mongodb service
 * sudo /sbin/service mongod stop //to stop the mongodb service
+* sudo reboot //to restart machine if mongo db get locked
