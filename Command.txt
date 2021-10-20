@@ -39,6 +39,9 @@ db.emp.find({$or:[{'personal.name': 'A'},{'personal.age': 30}]}).pretty()
 //using or+and
 db.emp.find({$or: [{$and:[{'_id': 'e1'},{'personal.name': 'A'}]},{'personal.age': 30}]}).pretty()
 
+//using $in
+db.emp.find({'personal.name': {$in: ['A','B']}}).pretty()
+
 //see specific columns
 db.emp.find({$or:[{'personal.name': 'A'},{'personal.age': 30}]}, {'personal.name':1, 'professional.designation': 1}).pretty()
 
