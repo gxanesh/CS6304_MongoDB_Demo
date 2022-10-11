@@ -1,7 +1,5 @@
 //to enter into mongodb
-mongo
-//to exit from mongodb
-exit
+mongosh
 
 //create a database or switch to a database
 use mydb
@@ -9,8 +7,9 @@ use mydb
 show dbs
 //see currently selected db
 db
-//drop databases
-db.dropDatabase()
+//show all the collections
+show collections
+
 
 *****Table emp******
 
@@ -24,11 +23,11 @@ db.emp.insert([{'_id': 'e2', 'personal': {'name': 'B', 'age': 25}}, {'_id': 'e3'
 //show all the data
 db.emp.find().pretty()
 
+//update single data
+db.emp.updateOne( { 'personal.name': 'A' },{$set: {'personal.age': 55}})
+
 //count all the data
 db.emp.find().count()
-
-//drop table/collection
-db.emp.drop()
 
 //using and
 db.emp.find({$and:[{'_id': 'e1'},{'personal.name': 'A'}]}).pretty()
@@ -48,11 +47,18 @@ db.emp.find({$or:[{'personal.name': 'A'},{'personal.age': 30}]}, {'personal.name
 //remove the id
 db.emp.find({$or:[{'personal.name': 'A'},{'personal.age': 30}]}, {'personal.name':1, 'professional.designation': 1, '_id': 0}).pretty()
 
-//update data (without specifying id, it is a normal insert)
-db.emp.save({'_id': 'e1', 'personal': {'age': 51}, 'professional': {'designation': 'CEO'}})
 
 //delete data
 db.emp.remove({'professional.designation': 'CEO'})
+
+//drop table/collection
+db.emp.drop()
+
+//drop databases
+db.dropDatabase()
+
+//to exit from mongodb
+exit
 
 
 ***** Table Twitter *****
