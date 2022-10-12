@@ -76,6 +76,9 @@ mongoimport --db mydb --collection csvtwitter --type csv --headerline --file '/h
 //Enter into mongodb
 mongosh
 
+//switch to mydb database
+use mydb
+
 //find tweets with specific word or pattern
 db.Twitter.find({'text':{$regex:'can'}},{'text':1,'_id':0})
 
