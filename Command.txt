@@ -57,17 +57,24 @@ db.emp.drop()
 //drop databases
 db.dropDatabase()
 
-//to exit from mongodb
-exit
+
 
 
 ***** Table Twitter *****
+
+//to exit from mongodb
+exit
+
 
 //import json file (don't forget to exit mongodb)
 mongoimport --db mydb --collection Twitter --type json --file '/home/cloudera/Downloads/MongoDB_Demo-master/tweets.txt' 
 
 //just an example how to insert csv file
 mongoimport --db mydb --collection csvtwitter --type csv --headerline --file '/home/cloudera/git/HBase_Demo/Twitter.csv'
+
+
+//Enter into mongodb
+mongosh
 
 //find tweets with specific word or pattern
 db.Twitter.find({'text':{$regex:'can'}},{'text':1,'_id':0})
