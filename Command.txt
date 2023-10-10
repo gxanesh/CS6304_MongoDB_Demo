@@ -44,7 +44,7 @@ db.emp.find({'personal.name': {$in: ['A','B']}}).pretty()
 //see specific columns
 db.emp.find({$or:[{'personal.name': 'A'},{'personal.age': 30}]}, {'personal.name':1, 'professional.designation': 1}).pretty()
 
-//remove the id
+//show by removing the id
 db.emp.find({$or:[{'personal.name': 'A'},{'personal.age': 30}]}, {'personal.name':1, 'professional.designation': 1, '_id': 0}).pretty()
 
 
