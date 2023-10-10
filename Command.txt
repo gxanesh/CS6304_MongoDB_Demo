@@ -67,7 +67,7 @@ exit
 
 
 //import json file (don't forget to exit mongodb)
-mongoimport --db mydb --collection Twitter --type json --file '/home/cloudera/Downloads/MongoDB_Demo-master/tweets.txt' 
+mongoimport --db mydb --collection Twitter --type json --file '/home/mrpk9/Downloads/tweets.txt' 
 
 //just an example how to insert csv file
 mongoimport --db mydb --collection csvtwitter --type csv --headerline --file '/home/cloudera/git/HBase_Demo/Twitter.csv'
