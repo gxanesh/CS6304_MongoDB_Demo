@@ -18,7 +18,9 @@ show collections
 db.emp.insert({'_id': 'e1', 'personal': {'name': 'A', 'age': 50}, 'professional': {'designation': 'Head'}})
 
 //insert multiple row
-db.emp.insert([{'_id': 'e2', 'personal': {'name': 'B', 'age': 25}}, {'_id': 'e3', 'personal': {'name': 'C', 'age': 30}, 'professional': {'designation': 'Programmer'}}, {'_id': 'e4', 'personal': {'name': 'D','age': 30}, 'professional': {'designation': 'Intern'}}])
+db.emp.insert([{'_id': 'e2', 'personal': {'name': 'B', 'age': 25}}, 
+{'_id': 'e3', 'personal': {'name': 'C', 'age': 30}, 'professional': {'designation': 'Programmer'}}, 
+{'_id': 'e4', 'personal': {'name': 'D','age': 30}, 'professional': {'designation': 'Intern'}}])
 
 //show all the data
 db.emp.find().pretty()
@@ -41,10 +43,10 @@ db.emp.find({$or: [{$and:[{'_id': 'e1'},{'personal.name': 'A'}]},{'personal.age'
 //using $in
 db.emp.find({'personal.name': {$in: ['A','B']}}).pretty()
 
-//see specific columns
+//see specific columns ('personal.name':1, 'professional.designation': 1) 1 indicates that column will be displayed
 db.emp.find({$or:[{'personal.name': 'A'},{'personal.age': 30}]}, {'personal.name':1, 'professional.designation': 1}).pretty()
 
-//show by removing the id
+//show by removing the id (0 indicates that column will be not be displayed)
 db.emp.find({$or:[{'personal.name': 'A'},{'personal.age': 30}]}, {'personal.name':1, 'professional.designation': 1, '_id': 0}).pretty()
 
 
