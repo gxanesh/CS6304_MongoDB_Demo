@@ -17,8 +17,15 @@ sudo apt-get install -y mongodb-org
 sudo systemctl start mongod   
 
 
-If you receive an error similar to the following when starting mongod  
+### EXTRA:: Tweets Stream (Not required for the class):
+* Run "TwitterStream.py" and store as many tweets as you like and then stop the execution. The keyword here is "cloud".
+* All your downloaded tweets are now stored in "tweets.txt" file in JSON format
+* See "sample_tweet" to understand the structure of a tweet.
+
+### Error Handling:
+If you receive an error similar to the following when starting mongod 
 Failed to start mongod.service: Unit mongod.service not found.  
+
 Run the following command first:  
 sudo systemctl daemon-reload  
 
@@ -33,10 +40,3 @@ sudo systemctl restart mongod
 
 * Begin using MongoDB:  
 mongosh  
-
-
-
-### EXTRA:: Tweets Stream (Not required for the class):
-* Run "TwitterStream.py" and store as many tweets as you like and then stop the execution. The keyword here is "cloud".
-* All your downloaded tweets are now stored in "tweets.txt" file in JSON format
-* See "sample_tweet" to understand the structure of a tweet.
